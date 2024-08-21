@@ -9,11 +9,11 @@ const alternativas = [
         enunciado: "No âmbito social, você prefere:",
         alternativa: [
             {
-                textp: "Alternativa 1",
+                texto: "Alternativa 1",
                 afirmaçao: "Afirmação 1",
             },
             {
-                textp: "Alternativa 2",
+                texto: "Alternativa 2",
                 afirmaçao: "Afirmação 2",
             },
         ]
@@ -24,11 +24,11 @@ const alternativas = [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativa: [
             {
-                textp: "Alternativa 3",
+                texto: "Alternativa 3",
                 afirmaçao: "Afirmação 3",
             },
             {
-                textp: "Alternativa 4",
+                texto: "Alternativa 4",
                 afirmaçao: "Afirmação 4",
             },
         ]
@@ -39,11 +39,11 @@ const alternativas = [
         enunciado: "No âmbito tecnológico, você prefere:",
         alternativa: [
             {
-                textp: "Alternativa 5",
+                texto: "Alternativa 5",
                 afirmaçao: "Afirmação 5",
             },
             {
-                textp: "Alternativa 6",
+                texto: "Alternativa 6",
                 afirmaçao: "Afirmação 6",
             },
         ]
@@ -58,6 +58,16 @@ function mostrarPerguntas () {
     perguntaAtual = alternativas [atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
+    mostrarAlternativas();
+}
+
+
+function mostrarAlternativas(){
+    for (const opcao of perguntaAtual.alternativas) {
+        const botaoAlternativa = document.createElement('button');
+        botaoAlternativa.textContent = opcao.texto;
+        caixaAlternativas.appendChild(botaoAlternativa);
+    }
 }
 
 mostrarPerguntas();
