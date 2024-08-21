@@ -50,3 +50,14 @@ const alternativas = [
         
     },
 ]
+
+let atual = 0; 
+let perguntaAtual;
+
+function mostrarPerguntas () {
+    perguntaAtual = alternativas [atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+}
+
+mostrarPerguntas();
