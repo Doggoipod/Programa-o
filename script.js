@@ -40,11 +40,11 @@ const alternativas = [
         alternativa: [
             {
                 texto: "Você pode implantar um chip em seu cérebro que lhe concederá acesso instantâneo a todo o conhecimento da humanidade, permitindo que você se torne a pessoa mais inteligente e informada do planeta, mas perderá gradualmente a capacidade de sonhar, imaginar e criar algo novo por conta própria. ",
-                afirmaçao: "Parabéns inteligentão!!! Está com todos os conhecimentos do mundo ao seu dispor ",
+                afirmaçao: "Parabéns inteligentão!!! Está com todos os conhecimentos do mundo ao seu dispor, mas o que adfianta se não vai fazer nada com ele :)",
             },
             {
-                texto: "Alternativa 6",
-                afirmaçao: "Afirmação 6",
+                texto: "Você pode optar por ter uma mente criativa e ilimitada, capaz de imaginar e criar coisas que o mundo nunca viu, mas nunca poderá aprender ou acessar conhecimentos além do que você já conhece.",
+                afirmaçao: "Parabéns!!! Escolheu viver no mundo da lua e ser um completo inútil para a sociedade",
             },
         ]
         
