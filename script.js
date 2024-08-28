@@ -53,6 +53,7 @@ const alternativas = [
 
 let atual = 0; 
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostrarPerguntas () {
     perguntaAtual = alternativas [atual];
@@ -63,11 +64,29 @@ function mostrarPerguntas () {
 
 
 function mostrarAlternativas(){
+    if(atual>= alternativas.length){
+        mostraResultado();
+        return;
+    }
     for (const opcao of perguntaAtual.alternativa) {
         const botaoAlternativa = document.createElement('button');
         botaoAlternativa.textContent = opcao.texto;
+        botaoAlternativa.addEventListener("click", ()=> respostaSelecionada(opcao));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
+}
+
+function respostaSelecionada(opcao){
+    const afirmacoes = opcao.alternativas;
+    historiaFinal += afirmacoes = " ";
+    atual++;
+    mostrarPerguntas();
+}
+
+function mostraResultado (){
+    caixaPerguntas.textContent = "Em resumo você escolheu...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
 }
 
 mostrarPerguntas();
