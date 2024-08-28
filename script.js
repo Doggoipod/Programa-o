@@ -68,7 +68,7 @@ function mostrarAlternativas(){
         mostraResultado();
         return;
     }
-    for (const opcao of perguntaAtual.alternativa) {
+    for (const opcao of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement('button');
         botaoAlternativa.textContent = opcao.texto;
         botaoAlternativa.addEventListener("click", ()=> respostaSelecionada(opcao));
